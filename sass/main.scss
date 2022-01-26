@@ -1,4 +1,11 @@
-body {
-  background-color: aqua;
-  color: beige;
-}
+@import "./header";
+@import "./hero";
+@import "./conditions";
+@import "./about";
+@import "./team";
+@import "./clients";
+@import "./footer";
+@import "./filters";
+@import "./project";
+@import "./modal";
+@import "./form";
