@@ -37,13 +37,12 @@
   transition-property: color;
   transition-duration: var(--timing-hover-focus);
   transition-timing-function: var(--function-hover-focus);
+  &:hover,
+  &:focus {
+    color: var(--first-backlight-color);
+  }
 }
-.header-contacts:hover {
-  color: var(--first-backlight-color);
-}
-.header-contacts:focus {
-  color: var(--first-backlight-color);
-}
+
 .header-icon {
   fill: currentColor;
   margin-right: 10px;
@@ -76,13 +75,12 @@
   transition-property: color;
   transition-duration: var(--timing-hover-focus);
   transition-timing-function: var(--function-hover-focus);
+  &:hover,
+  &:focus {
+    color: var(--first-backlight-color);
+  }
 }
-.nav-link:hover {
-  color: var(--first-backlight-color);
-}
-.nav-link:focus {
-  color: var(--first-backlight-color);
-}
+//
 .nav-link {
   font-weight: var(--font-weight-medium);
   font-size: 14px;
@@ -103,8 +101,7 @@
   position: absolute;
   left: 0;
   bottom: -1px;
-}
-
-.nav-active {
-  color: var(--first-backlight-color);
+  & {
+    color: var(--first-backlight-color);
+  }
 }

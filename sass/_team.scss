@@ -56,12 +56,17 @@
   transition-property: color, background-color;
   transition-duration: var(--timing-hover-focus);
   transition-timing-function: var(--function-hover-focus);
+  &:hover,
+  &:focus {
+    background-color: var(--first-backlight-color);
+    color: var(--second-backlight-color);
+  }
 }
-.team-social-link:hover,
-.team-social-link:focus {
-  background-color: var(--first-backlight-color);
-  color: var(--second-backlight-color);
-}
+// .team-social-link:hover,
+// .team-social-link:focus {
+//   background-color: var(--first-backlight-color);
+//   color: var(--second-backlight-color);
+// }
 .team-social-icon {
   fill: currentColor;
 }

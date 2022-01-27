@@ -50,22 +50,24 @@
   transition-property: color;
   transition-duration: var(--timing-hover-focus);
   transition-timing-function: var(--function-hover-focus);
+  &:hover,
+  &:focus {
+    color: var(--second-backlight-color);
+  }
 }
-.footer-link:hover,
-.footer-link:focus {
-  color: var(--second-backlight-color);
-}
+
 .footer-address {
   display: inline-block;
   color: var(--text-white-color);
   transition-property: color;
   transition-duration: var(--timing-hover-focus);
   transition-timing-function: var(--function-hover-focus);
+  &:hover,
+  &:focus {
+    color: var(--first-backlight-color);
+  }
 }
-.footer-address:hover,
-.footer-address:focus {
-  color: var(--first-backlight-color);
-}
+
 .footer-social {
   margin-left: 70px;
 }
@@ -87,12 +89,12 @@
   transition-property: background-color;
   transition-duration: var(--timing-hover-focus);
   transition-timing-function: var(--function-hover-focus);
+  &:hover,
+  &:focus {
+    background-color: var(--first-backlight-color);
+  }
 }
 
-.footer-social-link:hover,
-.footer-social-link:focus {
-  background-color: var(--first-backlight-color);
-}
 .footer-social-item + .footer-social-item {
   margin-left: 10px;
 }
@@ -145,11 +147,12 @@
   transition-property: background;
   transition-duration: var(--timing-hover-focus);
   transition-timing-function: var(--function-hover-focus);
+  &:focus,
+  &:hover {
+    background: var(--btn-fokus);
+  }
 }
-.futer-form-button:focus,
-.futer-form-button:hover {
-  background: var(--btn-fokus);
-}
+
 .futer-form-icon {
   right: 28px;
   top: 13px;

@@ -24,14 +24,14 @@
   transition-property: color, background, box-shadow;
   transition-duration: var(--timing-hover-focus);
   transition-timing-function: var(--function-hover-focus);
-}
-.filters-button:focus,
-.filters-button:hover {
-  background: var(--first-backlight-color);
-  color: var(--second-backlight-color);
-  box-shadow: 0px 2px 2px 0px #0000001f;
+  &:focus,
+  &:hover {
+    background: var(--first-backlight-color);
+    color: var(--second-backlight-color);
+    box-shadow: 0px 2px 2px 0px #0000001f;
 
-  box-shadow: 0px 1px 2px 0px #00000014;
+    box-shadow: 0px 1px 2px 0px #00000014;
 
-  box-shadow: 0px 3px 1px 0px #0000001a;
+    box-shadow: 0px 3px 1px 0px #0000001a;
+  }
 }

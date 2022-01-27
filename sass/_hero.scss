@@ -50,8 +50,8 @@
   transition-property: background;
   transition-duration: var(--timing-hover-focus);
   transition-timing-function: var(--function-hover-focus);
-}
-.hero-button:focus,
-.hero-button:hover {
-  background: var(--btn-fokus);
+  &:focus,
+  &:hover {
+    background: var(--btn-fokus);
+  }
 }
