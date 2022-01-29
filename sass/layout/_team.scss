@@ -1,37 +1,43 @@
-.team {
-  background-color: var(--background-filters-button);
+.sections-bg {
+  background: var(--background-filters-button);
 }
-.team-list {
+.team {
+  text-align: center;
+}
+.team__header {
+  font-weight: var(--font-weight-bold);
+  font-size: 36px;
+  line-height: 1.16;
+  letter-spacing: 0.03em;
+}
+.team__list {
   display: flex;
   margin-top: 50px;
 }
-.team-list .team-card + .team-card {
+.team__list .team__card + .team__card {
   margin-left: 30px;
 }
-.team-name-border {
+.team__border {
   border-top-style: none;
   padding-top: 30px;
   padding-bottom: 30px;
 }
-.team-name {
+.person {
+  text-align: center;
+}
+.person__name {
   font-weight: var(--font-weight-medium);
   font-size: 16px;
   line-height: 1.19;
-  text-align: center;
   letter-spacing: 0.03em;
-  color: var(--headers-dark-color);
 }
-.team-photo {
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-}
-.team-card {
+.team__card {
   background: var(--second-backlight-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
-.team-profession {
+.person__profession {
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
@@ -39,12 +45,12 @@
   margin-top: 10px;
   color: var(--text-color);
 }
-.team-social-list {
+.person__social__list {
   display: flex;
   justify-content: center;
   margin-top: 16px;
 }
-.team-social-link {
+.person__social__link {
   width: 44px;
   height: 44px;
   background-color: var(--second-backlight-color);
@@ -62,14 +68,10 @@
     color: var(--second-backlight-color);
   }
 }
-// .team-social-link:hover,
-// .team-social-link:focus {
-//   background-color: var(--first-backlight-color);
-//   color: var(--second-backlight-color);
-// }
-.team-social-icon {
+
+.person__social__icon {
   fill: currentColor;
 }
-.team-social-item + .team-social-item {
+.person__social__item + .person__social__item {
   margin-left: 10px;
 }

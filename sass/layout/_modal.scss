@@ -34,7 +34,7 @@
   text-align: center;
   margin-bottom: 12px;
 }
-.modal-close {
+.modal__close {
   width: 30px;
   height: 30px;
   border-radius: 50%;
@@ -46,33 +46,31 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--first-backlight-color);
+  &:hover,
+  &:focus .modal__close-icon {
+    fill: var(--first-backlight-color);
+  }
 }
-.modal-close-icon {
+.modal__close-icon {
   transition-property: fill;
   transition-duration: var(--timing-hover-focus);
   transition-timing-function: var(--function-hover-focus);
-}
-.modal-close:focus .modal-close-icon {
-  fill: var(--first-backlight-color);
-}
-.modal-close:hover .modal-close-icon {
-  fill: var(--first-backlight-color);
 }
 .is-hidden {
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
 }
-.input-text {
-  width: 100%;
-  height: 40px;
-  padding-left: 35px;
-  color: var(--text-color);
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  border-radius: 4px;
+.modal-form {
+  position: relative;
 }
-.form-label-text {
+.modal-form__input {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--first-backlight-color);
+  position: relative;
+}
+.modal-form__label {
   display: block;
   font-size: 12px;
   line-height: 1.15;
@@ -80,35 +78,8 @@
   color: var(--text-color);
   margin-bottom: 4px;
 }
-.modal-form-wrap {
-  display: block;
-  margin-bottom: 10px;
-  color: var(--first-backlight-color);
-  position: relative;
-}
-.form-checkbox-text {
-  display: flex;
-  font-size: 14px;
-  line-height: 1.7px;
-  letter-spacing: 0.03em;
-  color: var(--text-color);
-  justify-content: center;
-  align-items: center;
-}
 
-.form-checkbox-text::before {
-  content: "";
-  width: 16px;
-  height: 15px;
-  border: 1px solid #212121;
-  border-radius: 2px;
-  margin-right: 7px;
-}
-.form-checkbox:checked + .form-checkbox-text::before {
-  border: none;
-  background-image: url(../image/icon/check.svg);
-}
-.form-input-text {
+.modal-form__text {
   width: 100%;
   height: 40px;
   padding-left: 35px;
@@ -123,10 +94,8 @@
   transition-duration: var(--timing-hover-focus);
   transition-timing-function: var(--function-hover-focus);
 }
-.input-wrap {
-  position: relative;
-}
-.modal-form-icon {
+
+.modal-form__icon {
   position: absolute;
   left: 12px;
   top: 50%;
@@ -135,7 +104,7 @@
   transition-duration: var(--timing-hover-focus);
   transition-timing-function: var(--function-hover-focus);
 }
-.form-textarea {
+.modal-form__textarea {
   display: block;
   width: 100%;
   height: 96px;
@@ -150,16 +119,58 @@
   transition-duration: var(--timing-hover-focus);
   transition-timing-function: var(--function-hover-focus);
 }
-.modal-checkbox-wrap {
+.form-checkbox-wrap {
   margin-top: 20px;
 }
+.form-checkbox {
+  color: var(--text-color);
+}
+.form-checkbox__text {
+  display: flex;
+  font-size: 14px;
+  line-height: 1.7px;
+  letter-spacing: 0.03em;
 
-.checkbox-link {
+  justify-content: center;
+  align-items: center;
+  .form-checkbox__input:checked + &::before {
+    border: none;
+    background-image: url(../image/iconcheck.svg);
+  }
+}
+
+.form-checkbox__text::before {
+  content: "";
+  width: 16px;
+  height: 15px;
+  border: 1px solid #212121;
+  border-radius: 2px;
+  margin-right: 7px;
+}
+.form-checkbox__link {
   color: var(--first-backlight-color);
   text-decoration: underline;
 }
-
-.modal-form-button {
+.modal-button {
+  color: var(--text-white-color);
+}
+.modal-button-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+.modal-form__text:focus {
+  border: 1px solid var(--btn-fokus);
+  border-radius: 4px;
+}
+.modal-form__text:focus + .modal-form-icon {
+  fill: var(--first-backlight-color);
+}
+.modal-form__textarea:focus {
+  border: 1px solid var(--btn-fokus);
+  border-radius: 4px;
+}
+.modal-button__text {
   width: 200px;
   height: 50px;
   font-weight: var(--font-weight-bold);
@@ -175,24 +186,8 @@
   transition-property: background;
   transition-duration: var(--timing-hover-focus);
   transition-timing-function: var(--function-hover-focus);
-}
-.modal-form-button:hover,
-.modal-form-button:focus {
-  background: var(--btn-fokus);
-}
-.modal-button-wrap {
-  display: flex;
-  justify-content: center;
-  margin-top: 30px;
-}
-.form-input-text:focus {
-  border: 1px solid var(--btn-fokus);
-  border-radius: 4px;
-}
-.form-input-text:focus + .modal-form-icon {
-  fill: var(--first-backlight-color);
-}
-.form-textarea:focus {
-  border: 1px solid var(--btn-fokus);
-  border-radius: 4px;
+  &:hover,
+  &:focus {
+    background: var(--btn-fokus);
+  }
 }

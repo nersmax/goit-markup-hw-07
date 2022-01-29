@@ -1,3 +1,6 @@
+.footer {
+  background-color: var(--background-color);
+}
 .footer-logo {
   display: inline-block;
   font-family: Raleway;
@@ -8,7 +11,7 @@
   margin-bottom: 20px;
   color: var(--first-backlight-color);
 }
-.logo-White {
+.footer-logo__White {
   font-family: Raleway;
   font-weight: bold;
   font-size: 26px;
@@ -22,29 +25,27 @@
   letter-spacing: 0.03em;
   color: var(--text-white-color);
 }
-.adress-item {
+.adress__item {
   margin-top: 9px;
 }
-.adress-list :first-child {
+.adress__list :first-child {
   margin-top: 0px;
 }
-.footer {
-  background-color: var(--background-color);
+
+.footer-container {
+  display: flex;
+  align-items: baseline;
+  flex-grow: 1;
   line-height: 1.19;
   padding-top: 60px;
   padding-bottom: 60px;
   color: var(--text-white-color);
 }
-.footer-container {
-  display: flex;
-  align-items: baseline;
-  flex-grow: 1;
-}
 .footer-contacts {
   flex-grow: 1;
 }
 
-.footer-link {
+.address__link {
   display: inline-block;
   color: #ffffff99;
   transition-property: color;
@@ -56,7 +57,7 @@
   }
 }
 
-.footer-address {
+.address__text {
   display: inline-block;
   color: var(--text-white-color);
   transition-property: color;
@@ -67,18 +68,19 @@
     color: var(--first-backlight-color);
   }
 }
-
 .footer-social {
+  color: var(--text-white-color);
+}
+.footer-social-wrap {
   margin-left: 70px;
 }
-
-.footer-social-list {
+.footer-social__list {
   display: flex;
 }
-.footer-social-icon {
+.footer-social__icon {
   fill: var(--second-backlight-color);
 }
-.footer-social-link {
+.footer-social__link {
   display: flex;
   width: 44px;
   height: 44px;
@@ -95,66 +97,13 @@
   }
 }
 
-.footer-social-item + .footer-social-item {
+.footer-social__item + .footer-social__item {
   margin-left: 10px;
 }
-.footer-header-social {
+.footer-social__header {
   font-weight: var(--font-weight-bold);
   line-height: 16px;
-  font-size: 14px;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   margin-bottom: 20px;
-  color: var(--text-white-color);
-}
-.footer-form-wrap {
-  margin-left: 93px;
-}
-.footer-form-list {
-  display: flex;
-  font-size: 16px;
-  line-height: 20px;
-}
-
-.footer-form-imail {
-  width: 358px;
-  height: 50px;
-  padding-left: 16px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  box-sizing: border-box;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-  border-radius: 4px;
-  background: #2f303a;
-  color: #ffffff;
-}
-.futer-form-button {
-  display: flex;
-  width: 200px;
-  height: 50px;
-  font-weight: var(--font-weight-bold);
-  font-size: 16px;
-  line-height: 1.87;
-  letter-spacing: 0.06em;
-  color: var(--text-white-color);
-  background: var(--first-backlight-color);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  border: transparent;
-  cursor: pointer;
-  margin-left: 12px;
-  justify-content: center;
-  align-items: center;
-  transition-property: background;
-  transition-duration: var(--timing-hover-focus);
-  transition-timing-function: var(--function-hover-focus);
-  &:focus,
-  &:hover {
-    background: var(--btn-fokus);
-  }
-}
-
-.futer-form-icon {
-  right: 28px;
-  top: 13px;
-  margin-left: 12px;
 }

@@ -1,19 +1,15 @@
 .filters {
-  font-weight: var(--font-weight-medium);
   font-size: 16px;
-  line-height: 1.6;
-  letter-spacing: 0.03em;
 }
-.filters-list {
+.filters__list {
   display: flex;
   justify-content: center;
 }
-.filters-list .filters-item + .filters-item {
+.filters__list .filters__item + .filters__item {
   margin-left: 8px;
 }
-.filters-button {
+.filters__button {
   font-weight: var(--font-weight-medium);
-  font-size: 16px;
   line-height: 1.6;
   letter-spacing: 0.03em;
   cursor: pointer;

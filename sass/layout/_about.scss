@@ -1,14 +1,16 @@
-.header-sections {
+.about {
+  text-align: center;
+}
+.about__header {
   font-weight: var(--font-weight-bold);
   font-size: 36px;
   line-height: 1.16;
-  text-align: center;
   letter-spacing: 0.03em;
 }
-.about-imj {
+.about__imj {
   position: relative;
 }
-.about-text {
+.about__text {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -24,17 +26,17 @@
   background: rgba(47, 48, 58, 0.8);
   color: #ffffff;
 }
-.about-list {
+.about__list {
   display: flex;
   margin-top: 50px;
 }
-.about-list .team {
+.about__list {
   font-size: 16px;
   line-height: 1.19;
   letter-spacing: 0.03em;
   background: var(--background-filters-button);
   color: var(--headers-dark-color);
 }
-.about-list .about-imj + .about-imj {
+.about__list .about__imj + .about__imj {
   margin-left: 30px;
 }
